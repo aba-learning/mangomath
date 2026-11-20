@@ -1245,3 +1245,33 @@ updateXPDisplay();
 updateAchievements();
 updateProfileBadge();
 updateDevConsole();
+
+/* =========================================
+   MANGOHUB - F7 SHORTCUT
+========================================= */
+
+document.addEventListener("keydown", event => {
+  if (event.key === "F7" && !event.repeat) {
+    event.preventDefault();
+    window.location.href = "mangohub.html";
+  }
+});
+
+/* =========================================
+   MOBILE QUICK BUTTON ACTIONS
+========================================= */
+
+const mobileDevButton = document.getElementById("mobile-dev-button");
+const mobileHubButton = document.getElementById("mobile-hub-button");
+
+if (mobileDevButton) {
+  mobileDevButton.addEventListener("click", () => {
+    toggleDevConsole();
+  });
+}
+
+if (mobileHubButton) {
+  mobileHubButton.addEventListener("click", () => {
+    window.location.href = "mangohub.html";
+  });
+}
