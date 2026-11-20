@@ -56,11 +56,6 @@ a {
   display: none !important;
 }
 
-::selection {
-  color: #10110d;
-  background: var(--lime);
-}
-
 /* NAVBAR */
 
 .navbar {
@@ -1208,22 +1203,6 @@ footer {
   color: #10110d;
 }
 
-#dev-console-message {
-  margin-top: 13px;
-  color: var(--green);
-  font-size: 10px;
-  text-align: center;
-}
-
-.dev-console-footer {
-  display: block;
-  margin-top: 14px;
-  color: var(--muted);
-  font-size: 8px;
-  font-weight: 900;
-  text-align: center;
-}
-
 /* RESPONSIVE */
 
 @media (max-width: 900px) {
@@ -1360,9 +1339,7 @@ footer {
   }
 }
 
-/* =========================================
-   MANGOMATH PROFILE PAGE TYPOGRAPHY
-========================================= */
+/* MANGOMATH PROFILE PAGE TYPOGRAPHY */
 
 .profile-page,
 .profile-page *,
@@ -1430,4 +1407,48 @@ footer {
 footer p {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+}
+
+/* =========================================
+   QUICK BUTTONS - DEV + MANGOHUB
+   VISIBLE ON PC AND MOBILE
+========================================= */
+
+.mobile-quick-buttons {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+
+.mobile-quick-buttons button {
+  min-height: 32px;
+  min-width: 43px;
+  padding: 7px 11px;
+  border: none;
+  border-radius: 7px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform .18s ease, filter .18s ease;
+}
+
+#mobile-dev-button {
+  background: #fffe5d;
+  color: #111;
+}
+
+#mobile-hub-button {
+  background: #ECEA98;
+  color: #111;
+}
+
+.mobile-quick-buttons button:hover {
+  filter: brightness(1.12);
+  transform: translateY(-2px);
+}
+
+.mobile-quick-buttons button:active {
+  transform: scale(.94);
 }
